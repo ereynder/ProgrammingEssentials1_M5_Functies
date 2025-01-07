@@ -1,0 +1,40 @@
+// ZONDER FUNCTIE
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+let getal = await userInput.question('Geef een getal in: ')
+let factorial = 1
+
+if(getal>1){while(getal>1){
+    factorial = factorial*getal
+    getal--
+}
+console.log(factorial)
+}else(console.log('Je gaf een ongeldig getal in'))
+
+
+process.exit();
+
+// MET FUNCTIE
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+function factorialBerekenen(getal){
+    if(getal<1){console.error('Het getal moet groter zijn dan 1')}
+        else{
+    let factorial = 1
+    while(getal>1){
+        factorial = factorial*getal
+        getal--
+    }
+    return factorial
+}
+}
+
+let getalGebruiker = await userInput.question('Geef een getal in: ')
+
+console.log('De factorial van '+getalGebruiker+' is: '+factorialBerekenen(getalGebruiker))
+
+process.exit();
