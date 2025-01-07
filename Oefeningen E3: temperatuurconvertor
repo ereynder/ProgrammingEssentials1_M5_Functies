@@ -1,0 +1,13 @@
+function temperatuurConvertor(temperatuur, isCelsius){
+    let geconverteerd = 0
+    if(isCelsius===true){
+        geconverteerd = (temperatuur* (9/5))+32
+    }else{geconverteerd = (temperatuur-32)*1,8}
+    return geconverteerd
+}
+
+let temperatuurInFahrenheit = 32
+let temperatuurInCelsius = 0
+
+console.log(temperatuurInFahrenheit+' graden Fahrenheit omgerekend naar graden Celsius is '+temperatuurConvertor(temperatuurInFahrenheit,false))
+console.log(temperatuurInCelsius+' graden Celius omgerekend naar graden Fahrenheit is '+temperatuurConvertor(temperatuurInCelsius,true))
