@@ -1,0 +1,31 @@
+function oppervlakteCirkel(straal){
+    let oppervlakteCirkel = Math.PI * straal * straal
+    return oppervlakteCirkel
+}
+
+function oppervlakteDriehoek(basis, hoogte){
+    let oppervlakteDriehoek = (basis*hoogte)/2
+    return oppervlakteDriehoek
+}
+
+function oppervlakteRechthoek(zijde1, zijde2){
+    let oppervlakteRechthoek = zijde1 * zijde2
+    return oppervlakteRechthoek 
+}
+
+function oppervlakteVierkant(zijde){
+    let oppervlakteVierkant = zijde * zijde
+    return oppervlakteVierkant
+}
+
+const straal1 = 3
+const basis1 = 2
+const hoogte1 = 2
+const zijde1A = 5
+const zijde2A = 2
+const zijdeB = 2
+
+console.log('De oppervlakte van een cirkel met straal '+straal1+' is '+oppervlakteCirkel(straal1))
+console.log('De oppervlakte van een driehoek met basis '+basis1+' en '+hoogte1+' is '+oppervlakteDriehoek(basis1,hoogte1))
+console.log('De oppervlakte van een rechthoek met zijdes '+ zijde1A+' en '+zijde2A+' is '+oppervlakteRechthoek(zijde1A,zijde2A))
+console.log('De oppervlakte van een vierkant met zijde '+zijdeB+' is '+oppervlakteVierkant(zijdeB))
