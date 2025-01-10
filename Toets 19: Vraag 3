@@ -1,0 +1,20 @@
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+let locatie 
+
+function tvSerie(serie){
+    if(serie==='The Simpsons'){
+        locatie = 'de USA'
+        return locatie}
+    else{locatie = ' ... - sorry ik weet niet waar de serie zich afspeelt.'
+        return locatie
+    }
+}
+
+let serie = await userInput.question('Geef de naam van een tv-serie: ')
+
+console.log('Je gekozen TV-serie '+serie+' vindt plaats in '+tvSerie(serie))
+
+process.exit();
