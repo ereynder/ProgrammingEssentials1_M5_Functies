@@ -1,0 +1,25 @@
+let AantalDagen 
+
+function DagInMaand(maand, jaar){
+    if(maand===2){
+        if(jaar%400===0){
+            AantalDagen = 29
+            return AantalDagen
+        }else if((jaar%4===0)&&(jaar%100!=0)){
+            AantalDagen = 29 
+            return AantalDagen
+        }else{
+            AantalDagen = 28
+            return AantalDagen}
+    }else if(maand===4||maand===6||maand===9||maand===11){
+        aantalDagen = 30
+        return aantalDagen
+    }else{aantalDagen = 31
+        return aantalDagen
+    }
+}
+
+let maand = 2
+let jaar = 1800
+
+console.log('De '+maand+'e maand van het jaar '+jaar+' telt '+DagInMaand(maand, jaar)+' dagen.')
