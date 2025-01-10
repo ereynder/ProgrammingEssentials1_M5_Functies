@@ -1,0 +1,24 @@
+import * as readline from 'node:readline/promises';
+import{stdin as input, stdout as output} from 'node:process';
+const userInput = readline.createInterface({input, output});
+
+function delers(getal1,getal2){
+    while(getal1<getal2){
+        let deler = 1 
+        let som = 0
+        while(deler<getal1){
+        if(getal1%deler===0){
+            som = som + deler
+        }
+    deler++
+}
+    if(som===getal1){console.log(som)}
+    getal1++}
+}
+
+let getal1 = 1
+let getal2 = 100
+
+delers(getal1,getal2)
+
+process.exit();
